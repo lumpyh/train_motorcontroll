@@ -1,0 +1,3 @@
+[submodule "attiny"]
+	path = attiny
+	url = git@github.com:lumpyh/attiny.git

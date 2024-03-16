@@ -1,7 +1,7 @@
 TARGET=test
 MCU=attiny412
 FCPU=4000000UL
-SOURCES=main.c lib/i2c.c
+SOURCES=main.c attiny/i2c.c
 
 PROGRAMMER=jtag2updi
 PROG_PORT=/dev/ttyACM0
@@ -9,7 +9,7 @@ PROG_MCU=ATtiny412
 PROG_BAUD=115200
 
 OBJECTS=$(SOURCES:.c=.o)
-CFLAGS=-c -Os -DF_CPU=$(FCPU) -I/home/lumpyh/workspace/avr/avr-libc/include -I ./lib/
+CFLAGS=-c -Os -DF_CPU=$(FCPU) -I/home/lumpyh/workspace/avr/avr-libc/include -I ./attiny/
 LDFLAGS=-L/home/lumpyh/workspace/avr/avr-libc/avr/devices/attiny412
 
 .c.o:
